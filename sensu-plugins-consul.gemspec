@@ -22,7 +22,7 @@ Gem::Specification.new do |s| # rubocop:disable Metrics/BlockLength
                                'production_status'  => 'unstable - testing recommended',
                                'release_draft'      => 'false',
                                'release_prerelease' => 'false' }
-  s.name                   = 'sensu-plugins-consul'
+  s.name                   = 'sensu-plugins-consul-magec'
   s.platform               = Gem::Platform::RUBY
   s.post_install_message   = 'You can use the embedded Ruby by setting EMBEDDED_RUBY=true in /etc/default/sensu'
   s.require_paths          = ['lib']
@@ -33,7 +33,7 @@ Gem::Specification.new do |s| # rubocop:disable Metrics/BlockLength
 
   s.add_runtime_dependency 'sensu-plugin', '~> 1.2'
 
-  s.add_runtime_dependency 'diplomat',     '0.14.0'
+  s.add_runtime_dependency 'diplomat',     '2.0.2'
   s.add_runtime_dependency 'rest-client',  '1.8.0'
 
   s.add_development_dependency 'bundler',                   '~> 1.7'
