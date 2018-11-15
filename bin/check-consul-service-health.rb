@@ -114,10 +114,10 @@ class CheckConsulServiceHealth < Sensu::Plugin::Check::CLI
     Diplomat.configure do |dc|
       dc.url = config[:consul]
       dc.acl_token = config[:token]
+      headers = {}
+      headers['X-Consul-Token'] = config[:token] if config[:token]
       dc.options = {
-        headers: {
-          'X-Consul-Token' => config[:token]
-        }
+        headers: headers
       }
     end
 
